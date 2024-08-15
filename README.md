@@ -6,8 +6,7 @@ This repo contains the source code for a Calculator API gRPC server I built to l
 
 To run this code, you'll need the following dependencies:
 
-- Go 1.20
-- PostgreSQL 16
+- Go 1.22.5
 - Make
 
 To make modifications to this code, make sure you have protobuf tools installed
