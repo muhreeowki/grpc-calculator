@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "./pb";
+
+service Calculator {
+  rpc Add(CalculationRequest) returns (CalculationResponse);
+  rpc Sub(CalculationRequest) returns (CalculationResponse);
+  rpc Mul(CalculationRequest) returns (CalculationResponse);
+  rpc Div(CalculationRequest) returns (CalculationResponse);
+  rpc Sum(NumbersRequest) returns (CalculationResponse);
+}
+
+message CalculationRequest {
+  int64 a = 1;
+  int64 b = 2;
+}
+
+message NumbersRequest {
+  repeated int64 numbers = 1;
+}
+
+message CalculationResponse {
+  int64 result = 1;
+}
+
+
